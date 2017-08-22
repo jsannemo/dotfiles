@@ -1,2 +1,3 @@
-which zsh && chsh `which zsh`
-source $HOME/Code/dotfiles/zsh/install.zsh
+which zsh>/dev/null && chsh -s `which zsh`
+rm -f $HOME/.zshrc
+ln -s $HOME/Code/dotfiles/zsh/zshrc $HOME/.zshrc

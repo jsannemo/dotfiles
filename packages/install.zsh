@@ -4,7 +4,7 @@ sudo apt-get update
 
 if want_basic
 then
-    BASIC_PACKAGES=(vim git tmux python3 curl wget)
+    BASIC_PACKAGES=(vim git tmux python3 curl wget zsh)
     echo "Installing basic packages ($BASIC_PACKAGES)"
     sudo apt-get install $BASIC_PACKAGES
 fi
