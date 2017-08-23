@@ -3,6 +3,7 @@ ZSHFILES=$DOTFILES/zsh
 
 source $ZSHFILES/basic_commands.zsh
 source $ZSHFILES/git.zsh
+source $ZSHFILES/keys.zsh
 
 
 autoload -Uz promptinit
