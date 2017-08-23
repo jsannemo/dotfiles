@@ -11,7 +11,7 @@ fi
 
 if want_dev 
 then
-    DEV_PACKAGES=(golang openjdk-9-jdk build-essentials g++)
+    DEV_PACKAGES=(golang openjdk-9-jdk build-essentials g++ texlive)
     echo "Installing dev packages ($DEV_PACKAGES)"
     sudo apt-get install $DEV_PACKAGES
 fi
