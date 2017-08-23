@@ -127,3 +127,6 @@ endtry
 " Complement command mode with Ctrl+A for start, Ctrl+E for end
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
+
+" Disable vim intro
+set shm+=I
