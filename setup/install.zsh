@@ -2,7 +2,7 @@
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic work home)
-MODULES=(packages home zsh ssh)
+MODULES=(packages home zsh vim ssh)
 
 while [[ -z $PROFILE || ${PROFILES[(r)$PROFILE]} != $PROFILE ]]
 do
