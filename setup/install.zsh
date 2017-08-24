@@ -2,7 +2,7 @@
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic work home)
-MODULES=(packages home ssh fonts zsh vim tmux)
+MODULES=(packages home ssh fonts zsh vim tmux contest)
 
 if [[ -z $1 ]]
 then
@@ -22,11 +22,15 @@ else
     MODULE=$2
 fi
     
-while [[ ${MODULES[(r)$MODULE]} != $MODULE ]]
+while [[ ${MODULES[(r)$MODULE]} != $MODULE && $MODULE != "all" ]]
 do
     read MODULE\?"What module should be installed [$MODULES, all*]? "
 done
 
+if [[ $MODULE == "all" ]]
+then
+    MODULE=""
+fi
 if [[ ! -z $MODULE ]]
 then
     MODULES=($MODULE)

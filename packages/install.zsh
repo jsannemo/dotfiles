@@ -11,14 +11,14 @@ fi
 
 if want_dev 
 then
-    DEV_PACKAGES=(golang openjdk-9-jdk build-essentials g++ texlive)
+    DEV_PACKAGES=(golang openjdk-9-jdk build-essential g++ texlive texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra)
     echo "Installing dev packages ($DEV_PACKAGES)"
     sudo apt-get install $DEV_PACKAGES
 fi
 
 if want_home
 then
-    HOME_PACKAGES=(google-chrome-stable)
+    HOME_PACKAGES=(google-chrome-stable ghostscript)
     echo "Installing home packages ($HOME_PACKAGES)"
     sudo apt-get install $HOME_PACKAGES
     echo "Installing bazel"
