@@ -1,5 +1,6 @@
 mkdir -p $HOME/Code
 mkdir -p $HOME/Code/bin
+mkdir -p $HOME/Code/tmp
 
 if cd $HOME/Code/dotfiles
 then

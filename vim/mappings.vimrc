@@ -20,3 +20,6 @@ map <leader>tx :tabclose<cr>
 map <leader>tn :tabnext<cr>
 " ,tp for last tab
 map <leader>tp :tabprevious<cr>
+
+" Save a shift key
+noremap ; :

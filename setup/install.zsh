@@ -2,17 +2,29 @@
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic work home)
-MODULES=(packages home zsh vim ssh)
+MODULES=(packages home ssh fonts zsh vim tmux)
 
+if [[ -z $1 ]]
+then
+    PROFILE="invalid"
+else
+    PROFILE=$1
+fi
 while [[ -z $PROFILE || ${PROFILES[(r)$PROFILE]} != $PROFILE ]]
 do
-    read PROFILE\?"What profile is this machine ($PROFILES)? "
+    read PROFILE\?"What profile is this machine [$PROFILES]? "
 done
 
-MODULE="invalid"
+if [[ -z $2 ]]
+then
+    MODULE="invalid"
+else
+    MODULE=$2
+fi
+    
 while [[ ${MODULES[(r)$MODULE]} != $MODULE ]]
 do
-    read MODULE\?"What module should be installed ($MODULES), empty for all? "
+    read MODULE\?"What module should be installed [$MODULES, all*]? "
 done
 
 if [[ ! -z $MODULE ]]
