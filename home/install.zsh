@@ -11,7 +11,7 @@ fi
 
 if want_home 
 then
-    if [[ ! -d cd $HOME/Code/blog ]]
+    if [[ ! -d $HOME/Code/blog ]]
     then
         git clone git@github.com:jsannemo/jsannemo.github.io.git $HOME/Code/blog
     fi
