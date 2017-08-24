@@ -9,7 +9,10 @@ else
     git clone git@github.com:jsannemo/dotfiles $HOME/Code/dotfiles
 fi
 
-if [[ ! -d cd $HOME/Code/blog ]]
+if want_home 
 then
-    git clone git@github.com:jsannemo/jsannemo.github.io.git $HOME/Code/blog
+    if [[ ! -d cd $HOME/Code/blog ]]
+    then
+        git clone git@github.com:jsannemo/jsannemo.github.io.git $HOME/Code/blog
+    fi
 fi
