@@ -45,7 +45,7 @@ function want_work() {
 }
 
 function want_basic() {
-    [[ $PROFILE == "basic" || want_home ]]
+    [[ $PROFILE == "basic" || want_work ]]
 }
 
 TODOS=()
