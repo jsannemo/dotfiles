@@ -11,7 +11,7 @@ fi
 
 if want_dev 
 then
-    DEV_PACKAGES=(golang openjdk-9-jdk build-essential g++ texlive texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra)
+    DEV_PACKAGES=(golang openjdk-14-jdk build-essential g++ texlive texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra)
     echo "Installing dev packages ($DEV_PACKAGES)"
     sudo apt-get install $DEV_PACKAGES
 fi
@@ -24,6 +24,7 @@ then
     echo "Installing bazel"
     echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
     curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+    sudo apt-get update
     sudo apt-get install bazel
     sudo apt-get upgrade bazel
 fi

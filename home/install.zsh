@@ -16,3 +16,6 @@ then
         git clone git@github.com:jsannemo/jsannemo.github.io.git $HOME/Code/blog
     fi
 fi
+
+git config --global user.email "jsannemo@jsannemo.se"
+git config --global user.name "Johan Sannemo"

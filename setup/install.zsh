@@ -2,7 +2,7 @@
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic work home)
-MODULES=(packages home ssh fonts zsh vim tmux contest)
+MODULES=(packages home ssh fonts zsh vim contest)
 
 if [[ -z $1 ]]
 then
