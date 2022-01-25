@@ -2,6 +2,7 @@ DOTFILES=$HOME/Code/dotfiles
 ZSHFILES=$DOTFILES/zsh
 
 source $ZSHFILES/clipboard.zsh
+source $ZSHFILES/commands.zsh
 source $ZSHFILES/completion.zsh
 source $ZSHFILES/directories.zsh
 source $ZSHFILES/env.zsh
