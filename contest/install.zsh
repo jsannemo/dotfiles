@@ -16,9 +16,15 @@ if [[ want_home ]] {
     if [[ ! -d $HOME/Code/contest/pop-book ]] {
         git clone git@github.com:jsannemo/pop-book $HOME/Code/contest/pop-book
     }
-    sudo apt install automake g++ make libboost-regex-dev libgmp-dev libgmp10 libgmpxx4ldbl python python-pytest python-setuptools python-yaml debhelper dh-python python3-pytest
+    if [[ ! -d $HOME/Code/contest/pofaps-problems ]] {
+        git clone git@github.com:jsannemo/pofaps-problems $HOME/Code/contest/pofaps-problems
+    }
 
-    sudo apt install ghostscript libgmpxx4ldbl python-pkg-resources plastex python-yaml texlive-fonts-recommended texlive-lang-cyrillic texlive-latex-extra texlive-plain-generic tidy
+    sudo apt install automake g++ make libboost-regex-dev libgmp-dev libgmp10 libgmpxx4ldbl python3 python3-pytest python3-setuptools python3-yaml python3-plastex debhelper dh-python dpkg-dev
+
+
+    sudo apt install ghostscript libgmpxx4ldbl python3-minimal python-pkg-resources texlive-fonts-recommended texlive-lang-cyrillic texlive-latex-extra texlive-plain-generic tidy
+
     if cd $HOME/Code/contest/problemtools
     then
         git pull origin

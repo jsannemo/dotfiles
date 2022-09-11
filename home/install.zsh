@@ -4,7 +4,7 @@ mkdir -p $HOME/Code/tmp
 
 if cd $HOME/Code/dotfiles
 then
-    git pull origin
+    git pull origin master
 else
     git clone git@github.com:jsannemo/dotfiles $HOME/Code/dotfiles
 fi
@@ -17,5 +17,3 @@ then
     fi
 fi
 
-git config --global user.email "jsannemo@jsannemo.se"
-git config --global user.name "Johan Sannemo"

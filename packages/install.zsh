@@ -2,29 +2,16 @@
 
 sudo apt-get update
 
-if want_basic
-then
-    BASIC_PACKAGES=(vim git tmux python3 curl wget zsh xclip python3-pip fontconfig)
-    echo "Installing basic packages ($BASIC_PACKAGES)"
-    sudo apt-get install $BASIC_PACKAGES
-fi
-
-if want_dev 
-then
-    DEV_PACKAGES=(golang openjdk-14-jdk build-essential g++ texlive texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra)
-    echo "Installing dev packages ($DEV_PACKAGES)"
-    sudo apt-get install $DEV_PACKAGES
-fi
+BASIC_PACKAGES=(vim git tmux python3 curl wget zsh xclip python3-pip fontconfig)
+echo "Installing basic packages ($BASIC_PACKAGES)"
+sudo apt-get install $BASIC_PACKAGES
+git config --global user.email "jsannemo@jsannemo.se"
+git config --global user.name "Johan Sannemo"
 
 if want_home
 then
-    HOME_PACKAGES=(google-chrome-stable ghostscript)
-    echo "Installing home packages ($HOME_PACKAGES)"
-    sudo apt-get install $HOME_PACKAGES
-    echo "Installing bazel"
-    echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
-    curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
-    sudo apt-get update
-    sudo apt-get install bazel
-    sudo apt-get upgrade bazel
+    sudo snap install spotify
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+    rm google-chrome-stable_current_amd64.deb
 fi

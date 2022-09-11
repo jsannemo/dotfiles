@@ -1,8 +1,8 @@
 #!/usr/bin/zsh
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
-PROFILES=(basic work home)
-MODULES=(packages home ssh fonts zsh vim contest)
+PROFILES=(basic home)
+MODULES=(packages ssh dev home fonts zsh vim contest)
 
 if [[ -z $1 ]]
 then
@@ -38,14 +38,6 @@ fi
 
 function want_home() {
     [[ $PROFILE == "home" ]]
-}
-
-function want_work() {
-    [[ $PROFILE == "work" || want_home ]]
-}
-
-function want_basic() {
-    [[ $PROFILE == "basic" || want_work ]]
 }
 
 TODOS=()
